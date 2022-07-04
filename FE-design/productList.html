@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style/productList.css" />
+    <title>Product list</title>
+  </head>
+  <body>
+    <nav>
+      <div>
+        <h3>Product List</h3>
+        <button onclick="createButton()">Create new</button>
+      </div>
+      <a href="./login.html">Logout</a>
+    </nav>
+    <main>
+      <div class="container">
+        <div class="card">
+          <div class="image">
+            <div class="icons">
+              <img src="./assets/edit.png" alt="deleteIcons" id="edit" />
+              <img src="./assets/delete.png" alt="deleteIcons" id="delete" />
+            </div>
+          </div>
+          <div class="description">
+            <p>bicycle TDR 2000</p>
+            <p>$ 150</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="image">
+            <div class="icons">
+              <img src="./assets/edit.png" alt="deleteIcons" id="edit" />
+              <img src="./assets/delete.png" alt="deleteIcons" id="delete" />
+            </div>
+          </div>
+          <div class="description">
+            <p>bicycle TDR 2000</p>
+            <p>$ 150</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="image">
+            <div class="icons">
+              <img src="./assets/edit.png" alt="deleteIcons" id="edit" />
+              <img src="./assets/delete.png" alt="deleteIcons" id="delete" />
+            </div>
+          </div>
+          <div class="description">
+            <p>bicycle TDR 2000</p>
+            <p>$ 150</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="image">
+            <div class="icons">
+              <img src="./assets/edit.png" alt="deleteIcons" id="edit" />
+              <img src="./assets/delete.png" alt="deleteIcons" id="delete" />
+            </div>
+          </div>
+          <div class="description">
+            <p>bicycle TDR 2000</p>
+            <p>$ 150</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="image">
+            <div class="icons">
+              <img src="./assets/edit.png" alt="deleteIcons" id="edit" />
+              <img src="./assets/delete.png" alt="deleteIcons" id="delete" />
+            </div>
+          </div>
+          <div class="description">
+            <p>bicycle TDR 2000</p>
+            <p>$ 150</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="image">
+            <div class="icons">
+              <img src="./assets/edit.png" alt="deleteIcons" id="edit" />
+              <img src="./assets/delete.png" alt="deleteIcons" id="delete" />
+            </div>
+          </div>
+          <div class="description">
+            <p>bicycle TDR 2000</p>
+            <p>$ 150</p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <section class="createNew">
+      <div class="createContainer">
+        <h3>Create new</h3>
+        <input type="text" placeholder="Product Name" />
+        <input type="text" placeholder="Price (Dollar USD)" />
+        <input type="text" placeholder="Image url" />
+        <div class="button">
+          <button onclick="createBackButton()">Back</button>
+          <button>Create</button>
+        </div>
+      </div>
+    </section>
+    <section class="editProduct">
+      <div class="createContainer">
+        <h3>Edit Product</h3>
+        <input type="text" value="Bicycle TDR 2000" />
+        <input type="text" value="150" />
+        <input type="text" value="http::/sourceimage.com/image1" />
+        <div class="button">
+          <button onclick="editBackButton()">Back</button>
+          <button>Create</button>
+        </div>
+      </div>
+    </section>
+    <section class="deleteProduct">
+      <div class="createContainer">
+        <div id="deleteDesc">
+          <h3>Are you want to delete Bicycle TDR 2000?</h3>
+        </div>
+        <div class="button">
+          <button onclick="deleteBackButton()">no</button>
+          <button>Yes, delete it</button>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
+<script src="index.js"></script>

@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+main {
+  display: flex;
+  font-family: "Open Sans", sans-serif;
+  color: gray;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  gap: 15px;
+  flex-direction: column;
+}
+
+main > h1 {
+  font-weight: lighter;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  min-width: 420px;
+  height: 40%;
+  padding: 40px;
+  gap: 15px;
+  border: 2px solid rgb(150, 148, 148);
+  border-radius: 7px;
+}
+
+input,
+button {
+  height: 60px;
+  width: 90%;
+  border: 2px solid gray;
+  border-radius: 5px;
+  font-size: 1.2em;
+  text-indent: 10px;
+}
+
+button {
+  margin-top: 10px;
+}
+
+.helperText {
+  display: flex;
+  gap: 10px;
+}

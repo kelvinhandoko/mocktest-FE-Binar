@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+nav {
+  display: flex;
+  padding: 30px;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid black;
+}
+
+nav > div {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-left: 30px;
+}
+
+nav button {
+  padding: 10px;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+main {
+  padding: 50px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 50px;
+}
+
+.card {
+  height: 100%;
+  border: 1px solid black;
+}
+
+.image {
+  border-bottom: 1px solid black;
+  height: 200px;
+  background-image: url("../assets/placeholder.png");
+  background-size: auto;
+  background-position: center;
+  background-size: cover;
+}
+
+.icons {
+  padding: 10px;
+  display: flex;
+  gap: 10px;
+  justify-content: end;
+}
+
+.icons > img {
+  cursor: pointer;
+}
+
+.description {
+  padding: 20px;
+}
+
+.createNew,
+.editProduct,
+.deleteProduct {
+  display: none;
+  position: fixed;
+  top: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid gray;
+  gap: 10px;
+  height: 100vh;
+  width: 100%;
+}
+
+.createContainer {
+  background-color: white;
+  display: flex;
+  gap: 10px;
+  width: 40%;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid black;
+}
+
+.createContainer > h3 {
+  align-self: baseline;
+  padding: 10px;
+}
+
+.createContainer > input {
+  height: 60px;
+  width: 90%;
+  border: 2px solid gray;
+  border-radius: 5px;
+  font-size: 1.2em;
+  text-indent: 10px;
+}
+
+.createContainer > input:last-child {
+  margin-bottom: 20px;
+}
+
+.button {
+  display: flex;
+  justify-content: end;
+  gap: 10px;
+  width: 100%;
+  padding: 30px;
+  border-top: 1px solid black;
+}
+
+.button > button {
+  padding: 10px;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.createNew .button > button:first-child,
+.editProduct .button > button:first-child {
+  border: none;
+  background: none;
+}
+
+#deleteDesc {
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.deleteProduct .button {
+  justify-content: center;
+}
+
+.deleteProduct .button > button {
+  width: 100%;
+}
+
+.active {
+  display: flex;
+  background-color: rgba(128, 128, 128, 0.7);
+}
