@@ -1,24 +1,31 @@
-import {Button, FormControl, Input, useToast, VStack} from "@chakra-ui/react"
+import {
+  Button,
+  Flex,
+  FormControl,
+  Input,
+  useToast,
+  VStack,
+} from "@chakra-ui/react"
 import {useFormik} from "formik"
-import {useNavigate} from "react-router-dom"
 
-const RegisterForm = () => {
+const EditForm = ({data, onClose}) => {
+  const token = localStorage.getItem("access_token")
   const toast = useToast()
-  const navigate = useNavigate()
   const formik = useFormik({
     enableReinitialize: true,
     initialValues: {
-      name: "",
-      email: "",
-      password: "",
+      name: data?.name,
+      price: data?.price,
+      imageurl: data?.imageurl,
     },
     onSubmit: async (values) => {
       const response = await fetch(
-        `https://private-anon-0ded615c58-testbinar.apiary-mock.com/auth/signup`,
+        `https://private-anon-0ded615c58-testbinar.apiary-mock.com/v1/products/4`,
         {
-          method: "POST",
+          method: "PUT",
           headers: {
             "Content-Type": "application/json",
+            "Authorization": token,
           },
           body: JSON.stringify(values),
         }
@@ -26,7 +33,7 @@ const RegisterForm = () => {
       const message = await response.json()
       if (!message.result) {
         toast({
-          title: "failed to Register.",
+          title: "failed to Edit.",
           status: "error",
           duration: 3000,
           isClosable: true,
@@ -34,25 +41,19 @@ const RegisterForm = () => {
         })
       } else {
         toast({
-          title: "success to Register.",
+          title: "success to Edit.",
           status: "success",
           duration: 3000,
           isClosable: true,
           position: "top-right",
         })
-        navigate("/")
+        onClose()
       }
     },
   })
   return (
     <form onSubmit={formik.handleSubmit}>
-      <VStack
-        spacing={4}
-        border="1px solid"
-        borderRadius="7px"
-        width="500px"
-        padding={20}
-      >
+      <VStack spacing={4} padding={10} paddingTop={0}>
         <FormControl>
           <Input
             id="name"
@@ -67,35 +68,45 @@ const RegisterForm = () => {
         </FormControl>
         <FormControl>
           <Input
-            id="email"
-            name="email"
-            type="email"
-            placeholder="Email"
+            id="price"
+            name="price"
+            type="text"
+            placeholder="price"
             variant="outline"
             size="lg"
-            value={formik.values.email}
+            value={formik.values.price}
             onChange={formik.handleChange}
           />
         </FormControl>
         <FormControl>
           <Input
-            id="password"
-            name="password"
-            type="password"
-            placeholder="Password"
+            id="imageurl"
+            name="imageurl"
+            type="text"
+            placeholder="imageurl"
             variant="outline"
             size="lg"
-            mb={5}
-            value={formik.values.password}
+            value={formik.values.imageurl}
             onChange={formik.handleChange}
           />
         </FormControl>
-        <Button type="submit" width="full">
-          Submit
-        </Button>
       </VStack>
+      <Flex
+        gap={2}
+        justify="flex-end"
+        align="center"
+        padding={5}
+        borderTop="1px solid"
+      >
+        <Button background="none" onClick={onClose}>
+          Back
+        </Button>
+        <Button type="submit" mr={4}>
+          Edit
+        </Button>
+      </Flex>
     </form>
   )
 }
 
-export default RegisterForm
+export default EditForm

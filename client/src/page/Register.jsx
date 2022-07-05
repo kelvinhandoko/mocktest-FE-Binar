@@ -1,6 +1,5 @@
-import {Center, Flex, Heading, Link, Text, VStack} from "@chakra-ui/react"
+import {Flex, Heading, Link, Text, VStack} from "@chakra-ui/react"
 import {Helmet} from "react-helmet"
-import LoginForm from "../component/loginForm"
 import RegisterForm from "../component/RegisterForm"
 
 const Register = () => {

@@ -1,7 +1,9 @@
 import {Button, FormControl, Input, useToast, VStack} from "@chakra-ui/react"
 import {useFormik} from "formik"
+import {useNavigate} from "react-router-dom"
 
 const LoginForm = () => {
+  const navigate = useNavigate()
   const toast = useToast()
   const formik = useFormik({
     enableReinitialize: true,
@@ -11,7 +13,7 @@ const LoginForm = () => {
     },
     onSubmit: async (values) => {
       const response = await fetch(
-        `https://test-binar.herokuapp.com/auth/login`,
+        `https://private-anon-0ded615c58-testbinar.apiary-mock.com/auth/login`,
         {
           method: "POST",
           headers: {
@@ -37,6 +39,8 @@ const LoginForm = () => {
           isClosable: true,
           position: "top-right",
         })
+        localStorage.setItem("access_token", message.result.access_token)
+        navigate("/home")
       }
     },
   })
