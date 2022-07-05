@@ -1,70 +1,54 @@
-# Getting Started with Create React App
+# Configuration
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+1. pertama, install semua package dengan command "npm i" di terminal.
+2. setelah semua package terinstall, app bisa dijalankan dengan command npm run start.
 
-## Available Scripts
+# About the WEB
 
-In the project directory, you can run:
+## login
 
-### `npm start`
+### http://localhost:3000/
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+page awal di web ini adalah page Login.  
+Untuk form login bisa diisi dengan data:  
+ email:test@gmail.com  
+ password: abc123
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+jika form yang disi benar maka akan diredirect ke page home.
 
-### `npm test`
+## register
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### http://localhost:3000/register
 
-### `npm run build`
+untuk form Register bisa diisi dengan data:  
+nama: test  
+email:test123@gmail.com  
+ password: abc123
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+jika form yang disi benar maka akan diredirect ke page login.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## home
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### http://localhost:3000/home
 
-### `npm run eject`
+![homePage screen Shot](./public/Screenshot%20from%202022-07-05%2023-40-51.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+untuk membuat produk baru, silahkan untuk mengklik tombol **create new**.
+![createNew screen Shot](./public/Screenshot%20from%202022-07-05%2023-46-36.png)
+<br><br>
+jika produk success ditambahkan, akan muncul alert seperti ini.
+![createNew success Alert screen Shot](./public/Screenshot%20from%202022-07-05%2023-48-56.png)
+<br><br>
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+setiap product card memiliki icons untuk **delete** dan **edit**.
+<br><br>
+untuk button **edit** akan muncul popup seperti berikut.
+![edit popup screen Shot](./public/Screenshot%20from%202022-07-05%2023-52-41.png)
+jika product berhasil diedit akan muncul alert **success to edit**
+<br><br>
+untuk button **delete** akan muncul popup seperti berikut.
+![delete popup screen Shot](./public/Screenshot%20from%202022-07-05%2023-54-39.png)
+<br><br>
+silahkan klik button **delete** untuk menghapus produk.  
+<br><br>
+jika ingin **logout**, silahkan klik button **logout** dan akan diarahkan kembali ke page **login**.
